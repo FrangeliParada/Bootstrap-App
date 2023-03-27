@@ -1,0 +1,209 @@
+@import "./modules/colors";
+
+/* Mark input boxes that gets an error on validation: */
+$border-color: #888;
+
+textarea:focus,
+textarea:valid,
+input:focus,
+input:valid,
+select:focus,
+select.valid {
+  background-color: $light ;
+}
+textarea:valid,
+input:valid,
+select.valid {
+  color: $primary;
+}
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #80bdff !important;
+  box-shadow: 0 0 3px 2px #80bdff !important;
+}
+select:focus option {
+  background-color: #ffffff !important;
+  color: #000;
+}
+select:focus option:first-child {
+  color: #aaaaaa;
+}
+input[type="radio"]:focus,
+input[type="radio"]:checked {
+  border-color: #F7F8FD;
+  background-color: #F7F8FD !important;
+}
+// input[type="file"]:valid {
+//   background-color: #ffffff !important;
+//   color: #000;
+// }
+// input[type="file"].valid {
+//   background-color: $light !important;
+//   color: $primary;
+// }
+textarea.invalid,
+input.invalid,
+select.invalid {
+  background-color: #ffdddd;
+}
+textarea.invalid::placeholder,
+input.invalid::placeholder,
+select.invalid::placeholder {
+  color: #000;
+}
+
+input, select{
+  border: 1px solid $primary !important;
+  box-shadow: 0 8px 12.5px -4px #B8C4DC !important;
+
+
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.step-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.step-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  border-top: 2px solid $secondary;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 2px;
+  margin-top: 5px !important;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+  border: 2px solid $secondary;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: $secondary;
+  margin-top: 5px !important;
+  color: white;
+}
+
+.step.active {
+  background-color: $secondary;
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-top: 4px !important;
+}
+
+.white-box{
+  margin: 0% 8% 0% 8% !important;
+  padding: 3% 2% 3% 2% !important;
+  border-radius: 22px !important;
+}
+
+.step1{
+  color:$primary;
+  text-align: center;
+  margin: 0 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-container1{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.step1.active{
+  font-weight: 700;
+}
+.step1.finish{
+  font-weight: 700 !important;
+}
+.btn{
+  font-size: 15px !important;
+}
+
+.container-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.radio-title-goup{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.input-container-check{
+  position: relative;
+  height: 19rem;
+  width: 16rem;
+  margin: 0.5rem;
+  box-shadow: 0px 7px 5px -4px #CFD4E1;
+  border-radius: 20px;
+}
+.input-container-check input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+.input-container-check .radio-title{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+background: #F7F8FD;
+border-radius: 20px;
+transition: all 300ms ease;
+padding: 0% 10% 0% 10%;
+}
+.input-container-check label{
+  color: $primary;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 5%;
+  // letter-spacing: 1px;
+}
+input:checked + .radio-title{
+  background-color: #E4E8F4;
+  box-shadow: 0 0 12px #E4E8F4;
+
+}
+.radio:hover{
+  box-shadow: 0 0 12px #E4E8F4;
+}
+img.vidrio {
+  margin-top: 9%;
+  width: 70%;
+}
+
+img.choque {
+  margin-top: 1rem;
+  margin-bottom: -2.5rem;
+  width: 90%;
+}
+.btn-volver{
+  color: $primary;
+}

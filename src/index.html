@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap SCSS App</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container-fuild bg-light min-vh-100 p-5">
+    <div style="display: flex; margin: 1% 0% 3% 8%;">
+      <img src="./assets/img/auto.png" alt="" srcset="">
+      <h3 class="text-primary" style="margin: 1.5% 0% 0% 3%;">Declaración Siniestro Auto</h3>
+    </div>
+    <main class="p-4 border border-0 rounded bg-white white-box ">
+      <form id="regForm">
+        <!-- Circles which indicates the steps of the form: -->
+        <div class="step-container1">
+          <span class="step1">Datos del vehículo</span>
+          <span class="step1">Tipo de incidente</span>
+          <span class="step1">Datos del reporte</span>
+          <span class="step1">Reporte choque <br>con vehículo</span>
+          <span class="step1">Resumen del reporte </span>
+        </div>
+        <div class="step-container">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="row mt-3">
+          <!-- Introduzca los datos del vehículo -->
+          <div class="tab ms-4">
+
+            <!-- Placa -->
+            <div class="mb-4">
+              <h4 class="text-primary "><br>Introduzca los datos del Vehículo<br><br></h4>
+
+              <div class= "col-sm-2 ">
+                <label for="formPlaca" class="form-label text-primary mb-1 ">
+                  Placa
+                </label>
+                <input
+                  type="text"
+                  id="formPlaca"
+                  class="form-control"
+                  name="formPlaca"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <div style="display: flex;">
+
+            <!-- Asegurado -->
+            <div class="mb-4 col-sm-2">
+
+              <label for="formAsegurado" class="form-label text-primary mb-1">
+                Asegurado
+              </label>
+              <input
+                type="text"
+                id="formAsegurado"
+                class="form-control w-100"
+                name="formAsegurado"
+                required
+              />
+            </div>
+
+            <!-- Cedula -->
+            <!-- <div class="mb-2">
+              <label for="formDNI" class="form-label text-primary mb-1">
+                Cedula
+              </label>
+              <input
+                type="text"
+                id="formDNI"
+                class="form-control"
+                name="formAsegurado"
+                required
+              />
+            </div> -->
+
+            <!-- Correo -->
+            <div class="mb-2 ms-4 col-lg-3">
+
+              <label for="formCorreo" class="form-label text-primary mb-2">
+                Correo electrónico
+              </label>
+              <input
+                type="text"
+                id="formCorreo"
+                class="form-control"
+                name="formCorreo"
+                required
+                style="margin: -1% 0% 0% 0%;"
+              />
+
+            </div>
+
+            <!-- Teléfono Celular -->
+            <div class="mb-2 ms-4">
+              <label for="formTelefono" class="form-label text-primary mb-1">
+                Teléfono Celular
+              </label>
+
+              <div class="d-flex">
+                <select style="width: 45%;" class="form-select form-control" name="formTelefono" id="formTelefono" aria-label="Default select example">
+                  <option value="1">0424</option>
+                  <option value="2">0414</option>
+                  <option value="3">0426</option>
+                  <option value="4">0416</option>
+                </select>
+                <input
+                  type="tel"
+                  id="formTelefono"
+                  class="form-control ms-2"
+                  name="formTelefono"
+                  required
+                />
+              </div>
+              </div>
+          </div>
+
+
+
+          <div class="d-flex">
+            <!-- Fecha de ocurrencia -->
+            <div class="mb-2 col-lg-2">
+              <label
+                for="formFechaOcurrencia"
+                class="form-label text-primary mb-1"
+              >
+                Fecha de la ocurrencia
+              </label>
+                <input
+                  type="date"
+                  id="formFechaOcurrencia"
+                  class="form-control me-1 w-100 m-0"
+                  name="formFechaOcurrencia"
+                  required
+                />
+              </div>
+
+            <!-- hora de ocurrencia -->
+            <div class="mb-2 ms-4 col-lg-2">
+              <label
+                for="formFechaOcurrencia"
+                class="form-label text-primary mb-1"
+              >
+                Hora de la ocurrencia
+              </label>
+
+                <input
+                  type="time"
+                  id="formTimeOcurrencia"
+                  class="form-control ms-sm-1  m-0 "
+                  name="formTimeOcurrencia"
+                  required
+                />
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- ¿Cuál tipo de incidente desea reportar? -->
+          <div class="tab ">
+            <h4 class="text-primary mb-4 mt-3 ms-4">¿Cuál tipo de incidente desea reportar?</h4>
+
+        <!--checkbox-->
+        <div class="container-check">
+          <div class="radio-title-goup">
+
+            <div class="input-container-check">
+              <input
+              type="radio"
+              name="formTipoIncidente"
+              id="formTipoIncidente1"
+              class="radio"
+              value="Únicamente daños de vidrio de su vehículo"
+              >
+
+              <div class="radio-title">
+                <label for="formTipoIncidente1">Únicamente<br>
+                                                daños de vidrio<br>
+                                                de su vehículo
+                </label>
+                <img src="./assets/img/vidrios.png" name="walk" alt="" srcset="" class="vidrio">
+              </div>
+            </div>
+
+            <div class="input-container-check">
+              <input
+              type="radio"
+              name="formTipoIncidente"
+              id="formTipoIncidente2"
+              class="radio"
+              value="Accidente / Colisíon / Vandalismo / Otros"
+              >
+
+              <div class="radio-title">
+                <label for="formTipoIncidente2">Accidente<br>
+                                  Colisión<br>
+                                  Vandalismo<br>
+                                    Otros
+                </label>
+                <img src="./assets/img/choque.png" name="walk" alt="" srcset="" class="choque">
+              </div>
+            </div>
+
+            <div class="input-container-check ">
+              <input
+              type="radio"
+              name="formTipoIncidente"
+              id="formTipoIncidente3"
+              class="radio"
+              value="Robo / Hurto de Vehículo">
+
+              <div class="radio-title">
+                <label for="formTipoIncidente3">Robo <br>
+                                  Hurto de Vehículo
+                </label>
+                <img src="./assets/img/hurto.png" name="walk" alt="" srcset="" class="hurto">
+              </div>
+            </div>
+
+          </div>
+
+
+          </div>
+        </div>
+
+
+          <!-- Anexe documentos de la denuncia -->
+          <div class="tab col-sm-7">
+            <p class="mb-3 ms-3 text-primary">
+              Datos del Reposte
+            </p>
+
+            <!-- Estado -->
+            <div class="mb-2">
+              <h2 class="text-primary ">Introduce los datos del reporte</h2>
+              <label for="formEstado" class="form-label text-primary mb-1">
+                Estado
+              </label>
+              <select id="formEstado" class="form-select" name="formEstado">
+                <option selected disabled value="">Seleccione un Estado</option>
+                <option value="Ejemplo">Ejemplo</option>
+              </select>
+            </div>
+
+            <!-- Ciudad -->
+            <div class="mb-2">
+              <label for="formCiudad" class="form-label text-primary mb-1">
+                Ciudad
+              </label>
+              <select id="formCiudad" class="form-select" name="formCiudad">
+                <option selected disabled value="">
+                  Seleccione un Estado primero
+                </option>
+              </select>
+            </div>
+
+            <!-- CICPC -->
+            <div class="mb-2">
+              <label for="formCICPC" class="form-label text-primary mb-1">
+                ¿Se realizó denuncia en el CICPC?
+              </label>
+              <select id="formCICPC" class="form-select" name="formCICPC">
+                <option selected disabled value="">Seleccione</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <!-- Fecha/hora de la denuncia -->
+            <div class="mb-2 d-none">
+              <label
+                for="formFechaDenuncia"
+                class="form-label text-primary mb-1"
+              >
+                Fecha/hora de la denuncia
+              </label>
+              <div class="d-flex">
+                <input
+                  type="date"
+                  id="formFechaDenuncia"
+                  class="form-control me-1 w-50 m-0"
+                  name="formFechaDenuncia"
+                  required
+                />
+                <input
+                  type="time"
+                  id="formTimeDenuncia"
+                  class="form-control ms-sm-1 w-50 m-0"
+                  name="formTimeDenuncia"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Introduzca los datos del reporte -->
+          <div class="tab col-sm-7">
+            <p class="mb-3 ms-3 text-primary">
+              Partes Afectadas
+            </p>
+
+            <!-- Documento Denuncia CICPC -->
+            <div class="mb-2 d-none">
+              <h2 class="text-primary ">Selecciona todas las partes afectadas del vehículo</h2>
+              <label
+                for="formFileDenuncia"
+                class="form-label text-primary mb-1 fs-6"
+              >
+                Adjunte el documento Denuncia CICPC (si lo tiene)
+              </label>
+              <input
+                type="file"
+                id="formFileDenuncia"
+                class="form-control"
+                name="formFileDenuncia"
+                required
+              />
+            </div>
+
+            <!-- Recaudos por robo de vehiculo -->
+            <div class="mb-2 d-none">
+              <label
+                for="formFileRecaudos"
+                class="form-label text-primary mb-1 fs-6"
+              >
+                Adjunte la planilla de recaudos por robo de vehiculo (si lo
+                tiene)
+              </label>
+              <input
+                type="file"
+                id="formFileRecaudos"
+                class="form-control"
+                name="formFileRecaudos"
+                required
+              />
+            </div>
+
+            <!-- Describa brevemente lo ocurrido -->
+            <div class="mb-2">
+              <label
+                for="formOcurrido"
+                class="form-label text-primary mb-1 fs-6"
+              >
+                Describa brevemente lo ocurrido
+              </label>
+              <textarea
+                id="formOcurrido"
+                class="form-control"
+                name="formOcurrido"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Resumen del reporte -->
+          <div class="tab">
+            <p class="mb-3 ms-3 text-primary">Resumen del reporte</p>
+            <!-- Datos del asegurado -->
+            <div class="row">
+              <div class="col-md-3">
+                <p class="mb-3 ms-3 text-primary">Datos del asegurado</p>
+
+                <div class="rw">
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Nombre</h6>
+                    <p id="showAsegurado" class="ms-4 text-muted"></p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Documento de identidad</h6>
+                    <p id="showDNI" class="ms-4 text-muted"></p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Correo Electrónico</h6>
+                    <p id="showCorreo" class="ms-4 text-muted"></p>
+                  </div>
+
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Celular</h6>
+                    <p id="showTelefono" class="ms-4 text-muted"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Datos reporte incidente -->
+              <div class="col-md-4">
+                <p class="mb-3 ms-3 text-primary">Resumen del reporte</p>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Fecha Ocurrencia</h6>
+                    <p class="ms-4 text-muted">
+                      <span id="showFechaOcurrencia"></span>
+                      <span id="showTimeOcurrencia"></span>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Incidente Reportado</h6>
+                    <p id="showTipoIncidente" class="ms-4 text-muted"></p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Placa del Vehículo</h6>
+                    <p id="showPlaca" class="ms-4 text-muted"></p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Lugar del robo</h6>
+                    <p class="ms-4 text-muted">
+                      <span id="showEstado"></span>
+                      <span id="showCiudad"></span>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Denuncia CICPC</h6>
+                    <p id="showCICPC" class="ms-4 text-muted"></p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Planilla CICPC</h6>
+                    <p class="ms-4 text-muted">
+                      <span id="showFileDenuncia"></span>
+                      <span id="showFileRecaudos"></span>
+                    </p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-12 col-lg-6">
+                    <h6>Fecha Denuncia CICPC</h6>
+                    <p class="ms-4 text-muted">
+                      <span id="showFechaDenuncia"></span>
+                      <span id="showTimeDenuncia"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div>
+                  <h6>Descripción</h6>
+                  <textarea
+                    id="showOcurrido"
+                    class="form-control text-primary"
+                    disabled
+                    readonly
+                  >
+                  </textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones Regresar/Siguiente -->
+        <div class="d-flex mt-3 px-4" style="justify-content: flex-end;">
+          <button
+            type="button"
+            id="prevBtn"
+            class="btn btn-sm rounded px-4 py-2 btn-volver"
+            onclick="nextPrev(-1)"
+          >
+            Volver
+          </button>
+          <button
+            type="button"
+            id="nextBtn"
+            class="btn btn-primary btn-sm rounded ms-2 px-4 py-2 "
+            onclick="nextPrev(1)"
+          >
+            Continuar
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/venezuelaJSON.js"></script>
+  </body>
+</html>
